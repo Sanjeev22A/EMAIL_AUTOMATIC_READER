@@ -46,4 +46,4 @@ git_pusher:
 	read msg; \
 	git add .; \
 	git commit -m "$$msg"; \
-	git push
+	git push origin main
