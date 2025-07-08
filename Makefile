@@ -1,12 +1,12 @@
 PY = python3
 CRON_SCRIPT := /home/vboxuser/EMAIL_READER_AGENT/agent_scheduler.sh
 CRON_JOB := 22 7 * * * $(CRON_SCRIPT)
-ZERO_SHOT_CLASSIFIER := email_classifier/zero_shot_classifier.py
+ZERO_SHOT_CLASSIFIER := email_classifier.zero_shot_classifier
 
 
 # Run cleanup script
 clean: email_reader/cleanup.py
-	$(PY) email_reader/cleanup.py
+	$(PY) -m email_reader.cleanup
 
 
 cleanup.py: get_today_email
@@ -51,7 +51,7 @@ git_pusher:
 	git push origin main
 
 zero_shot_classifier: $(ZERO_SHOT_CLASSIFIER)
-	$(PY) $(ZERO_SHOT_CLASSIFIER)
+	$(PY) -m $(ZERO_SHOT_CLASSIFIER)
 
 $(ZERO_SHOT_CLASSIFIER):
 	echo "Define the classifier file"

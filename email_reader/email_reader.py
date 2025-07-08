@@ -4,7 +4,7 @@ from email.header import decode_header
 import webbrowser
 import os
 from dotenv import load_dotenv
-from my_exceptions import IMAP_CONNECTOR_FAIL_EXCEPTION,MAIL_READ_FAILED_EXCEPTION
+from .my_exceptions import IMAP_CONNECTOR_FAIL_EXCEPTION,MAIL_READ_FAILED_EXCEPTION
 
 import re
 
