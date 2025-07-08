@@ -1,1 +1,1 @@
-This is an automation agent designed to run at a specific time of the day and thus give a description of my emails, their category and their importance level. If anyone wishes to contribute follow my github and mail me at sanjeevananth2211@gmail.com
+This is an automation agent designed to run at a specific time of the day and thus give a description of my emails, their category and their importance level. 
