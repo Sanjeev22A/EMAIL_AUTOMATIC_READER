@@ -2,7 +2,13 @@ from email_reader import MailReader
 from pprint import pprint
 from datetime import datetime,timedelta
 import shutil
-import os
+import os,sys
+#Add the email_reader directory to the path
+script_dir=os.path.dirname(os.path.abspath(__file__))
+email_reader_dir=os.path.join(script_dir,'..')
+sys.path.insert(0,email_reader_dir)
+
+
 def remove_directory(dir_path):
     if os.path.exists(dir_path) and os.path.isdir(dir_path):
         shutil.rmtree(dir_path)

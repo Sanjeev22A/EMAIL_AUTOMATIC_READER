@@ -1,6 +1,13 @@
 from transformers import pipeline
 from get_today_email import get_todays_mail, clean_up
 from pprint import pprint
+import os,sys
+
+#Add the email_reader directory to the path
+script_dir=os.path.dirname(os.path.abspath(__file__))
+email_reader_dir=os.path.join(script_dir,'..')
+sys.path.insert(0,email_reader_dir)
+
 
 # Correct model name
 classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
